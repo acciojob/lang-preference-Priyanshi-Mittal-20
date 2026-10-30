@@ -1,5 +1,9 @@
 //your JS code here. If required.
-function langStore(lan)
+let btn= document.getElementById("submit")
+btn.addEventListener("click",()=>langStore(e))
+function langStore(e)
 {
-	sessionStorage.setItem("language",lan)
+	e.preventDefault()
+	let lang=document.getElementById("language").value
+	sessionStorage.setItem("language",lang)
 }
